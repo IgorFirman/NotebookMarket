@@ -1,0 +1,21 @@
+﻿@model Laptop
+
+<h2 class="margin-15px">@Model.Model</h2>
+
+<div class="details">
+    <img alt="@Model.Model" src="@Model.ImageUrl">
+    <div class="caption-full">
+        <h3>@Model.Price грн.</h3>
+        <h3>
+            <a href="#">@Model.Model</a>
+        </h3>
+        <h5>@Model.ShortDescription</h5>
+        <p>@Model.LongDescription</p>
+        <div class="addToCart">
+            <p class="button">
+                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
+                   asp-route-laptopId="@Model.LaptopId">Додати до замовлення</a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿@model LaptopListViewModel
+
+
+<h2 class="center">@Model.CurrentCategory</h2>
+<div class="container">
+    <div class="">
+        <div class="row const-height">
+            @foreach (var lp in Model.Laptops)
+            {
+                <partial name="_LaptopCard" model="lp" />
+            }
+        </div>
+    </div>
+</div>

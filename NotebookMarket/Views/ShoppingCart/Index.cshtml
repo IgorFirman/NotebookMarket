@@ -1,0 +1,42 @@
+﻿@model ShoppingCartViewModel
+<h3 class="margin-15px">Корзина з обраними товарами</h3>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Ноутбук</th>
+            <th scope="col">Ціна</th>
+            <th scope="col">Кількість</th>
+            <th scope="col">Сума</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+        {
+            <tr>
+                <th scope="row"><a class="text-dark" asp-controller="Laptop" asp-action="Details" asp-route-id="@line.Laptop.LaptopId">@line.Laptop.Model</a></th>
+                <td>@line.Laptop.Price.ToString() грн.</td>
+                <td>@line.Amount</td>
+                <td>@((line.Amount*line.Laptop.Price).ToString("c"))</td>
+                <td>
+                    <p class="button">
+                        <a class="btn btn-danger"
+                           asp-controller="ShoppingCart"
+                           asp-action="RemoveFromShoppingCart"
+                           asp-route-pieId="@line.Laptop.LaptopId">Прибрати з корзини</a>
+                    </p>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3" class="text-right">Всього до оплати:</td>
+        <td class="text-right">
+            @Model.ShoppingCartTotal.ToString("c")
+        </td>
+    </tr>
+    </tfoot>
+</table>
+<div class="text-center"><a class="btn btn-warning" asp-controller="Order" asp-action="Index">Замовити</a> </div>
+

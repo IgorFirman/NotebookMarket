@@ -1,0 +1,11 @@
+﻿@model HomeViewModel
+<div class="col-md-10 margin-15px"><partial name="_Carousel" /></div>
+
+<h3>Ноутбуки зі знижкою</h3>
+<div class="row">
+    @foreach (var lap in Model.LaptopsOnDiscount)
+    {
+        <partial name="_LaptopCard" model="lap" />
+    }
+</div>
+

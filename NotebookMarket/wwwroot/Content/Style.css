@@ -1,0 +1,60 @@
+﻿body {
+    
+}
+
+.background{
+   
+}
+.color-white {
+    
+    text-decoration: none;
+
+}
+.img-logo {
+    width: 75%;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+.thumbnail img {
+    width: 70%;
+}
+
+.thumbnail img:hover {
+    width: 80%;
+}
+.thumbnail {
+    padding: 15px;
+    
+}
+.thumbnail:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.center {
+    text-align: center;
+    margin: 15px;
+}
+.caption {
+    height: 180px;   
+}
+
+.size-14{
+    font-size: 14px;
+}
+center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.details img{
+    width:80%;
+
+}
+.margin-15px{
+    margin:15px;
+}
