@@ -3,7 +3,7 @@
     <div class="thumbnail">
         <a asp-controller="Laptop" asp-action="Details" asp-route-id="@Model.LaptopId"><img class="center-img" src="@Model.ImageUrl" alt=""></a>
         <div class="caption">
-            <h4>@Model.Price.ToString("#.##"+" грн" +".")</h4>
+            <h4>@Model.Price.ToString("#.##") грн.</h4>
             <h5>
                 <a asp-controller="Laptop"
                    asp-action="Details"

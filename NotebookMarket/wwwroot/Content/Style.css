@@ -11,7 +11,7 @@
 
 }
 .img-logo {
-    width: 75%;
+    width: 80%;
     border-radius: 50%;
     margin-left: 15px;
     margin-top: 20px;
@@ -42,7 +42,10 @@
 .caption {
     height: 180px;   
 }
-
+.carousel-img-size{
+    height:30px;
+    width:auto;
+}
 .size-14{
     font-size: 14px;
 }
