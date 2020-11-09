@@ -11,11 +11,11 @@
         </h3>
         <h5>@Model.ShortDescription</h5>
         <p>@Model.LongDescription</p>
-        <div class="addToCart">
-            <p class="button">
-                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
-                   asp-route-laptopId="@Model.LaptopId">Додати до замовлення</a>
-            </p>
-        </div>
+        <p class="button">
+            <a class="btn btn-primary"
+               asp-controller="ShoppingCart"
+               asp-action="AddToShoppingCart"
+               asp-route-pieId="@Model.LaptopId">Додати до замовлення</a>
+        </p>
     </div>
 </div>
